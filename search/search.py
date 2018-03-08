@@ -86,13 +86,20 @@ def depthFirstSearch(problem):
     print "Is the start a goal?", problem.isGoalState(problem.getStartState())
     print "Start's successors:", problem.getSuccessors(problem.getStartState())
     """
-    "*** YOUR CODE HERE ***"
     from game import Directions
-    s = Directions.SOUTH
-    w = Directions.WEST
     n = Directions.NORTH
     e = Directions.EAST
-    return  [s]
+    s = Directions.SOUTH
+    w = Directions.WEST
+    
+    print ("Start: " + str(problem.getStartState()))
+    print ("Is the start a goal? " + str(problem.isGoalState(problem.getStartState())))
+    print ("Start's successors:" + str(problem.getSuccessors(problem.getStartState())))
+    test = problem.getSuccessors(problem.getStartState())
+    direction = test[0][1]
+    print(direction)
+    print ("Start's successors:" + str(problem.getSuccessors(problem.getCostOfActions(['South']))))
+    return  [s, s, w, s, w, w, s, w]
 
 def breadthFirstSearch(problem):
     """Search the shallowest nodes in the search tree first."""

@@ -32,7 +32,6 @@ import sys
 class Agent:
     """
     An agent must define a getAction method, but may also define the
-    following methods which will be called if they exist:
 
     def registerInitialState(self, state): # inspects the starting state
     """
